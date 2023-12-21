@@ -1,0 +1,28 @@
+/* logo css  */
+
+.logomain{
+    width: 200px;  
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.search-container {
+    display: flex;
+    color: #ffffff;
+
+}
+
+input[type="text"] {
+    padding: 5px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.sbox{
+    background-color: #18273f;
+    border-radius: 50px;
+}

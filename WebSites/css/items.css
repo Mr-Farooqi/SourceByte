@@ -1,0 +1,253 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Cards */
+  .card-column {
+    width: 50%;
+    float: left;
+    padding: 4%;
+    box-sizing: border-box;
+  }
+  
+  .column-1 {
+    padding-top: 100px;
+  }
+  
+  .card {
+    width: 92%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: #EB5160;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 60px;
+  }
+  
+  .border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    border: 5px double #fff;
+    border-radius: 20px;
+    opacity: 0.5;
+    left: -6px;
+    top: -6px;
+  }
+  
+  .card h1 {
+    position: relative;
+    padding: 190px 0px 100px 10px;
+    width: 90%;
+  }
+  
+  .card > img {
+    width: 90%;
+    position: absolute;
+    border-radius: 20px;
+    opacity: 0.8;
+    top: -6%;
+    left: -6%;
+  }
+  
+  .card-color-0 {
+    background-color: #18273f;
+  }
+  
+  .card-color-1 {
+    background-color: #18273f;
+  }
+  
+  .card-color-2 {
+    background-color: #18273f;
+  }
+  
+  .card-color-3 {
+    background-color: #18273f;
+  }
+
+  /* box hover shadow */
+  .card-color-0:hover{
+    box-shadow: 0 0 50px 15px #48abe0;
+  }
+  
+  .card-color-1:hover{
+    box-shadow: 0 0 50px 15px #48abe0;
+  }
+  
+  .card-color-2:hover{
+    box-shadow: 0 0 50px 15px #48abe0;
+  }
+  
+  .card-color-3:hover{
+    box-shadow: 0 0 50px 15px #48abe0;
+  }
+  
+  /* The cover (expanding background) */
+  .cover {
+    position: fixed;
+    background: #d7d2d3;
+    z-index: 100;
+    transform-origin: 50% 50%;
+  }
+  
+  /* The open page content */
+  .open-content {
+    width: 100%;
+    z-index: 110;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* .open-content img {
+    position: relative;
+    width: 90%;
+    margin-left: 3%;
+    margin-top: 20px;
+    z-index: 5;
+  } */
+  
+  .open-content .text {
+    background: #fff;
+    /* margin-top: 16%; */
+    padding: 0% 0% 0% 0%;
+    width: 80%;
+    /* margin-left: 5%; */
+    /* margin-bottom: 5%; */
+  }
+  
+  .open-content .text h1, .open-content .text p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .close-content {
+    display: block;
+    /* position: absolute; */
+    margin-top: 300px;
+    margin-left: 600px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* .close-content span {
+    background: #222;
+    width: 30px;
+    height: 6px;
+    display: block;
+    position: absolute;
+    top: 14px;
+  } */
+  
+  .x-1 {
+    transform: rotate(45deg);
+  }
+  
+  .x-2 {
+    transform: rotate(-45deg);
+  }
+  
+  /* 
+  ** Transitions
+  */
+  
+  .card {
+    transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+  }
+  
+  .border {
+    transition: opacity 200ms linear, transform 200ms ease-out;
+  }
+  
+  .card img {
+    transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+  }
+  
+  .card h1 {
+    transform: translate3d(20%, 0px, 0px);  
+    transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
+  }
+  
+  /* Clicked card */
+  .card.clicked img {
+    transform: translate3d(0px, -40px, 0px);
+    opacity: 0;
+  }
+  
+  .card.clicked .border {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+  
+  .card.out, .card.out img {
+    transform: translate3d(0px, -40px, 0px);
+    opacity: 0;
+  }
+  
+  .card.out h1, .card.clicked h1 {
+    transform: translate3d(20%, -40px, 0px);
+    opacity: 0;
+  }
+  
+  .cover {
+    transition: transform 300ms ease-in-out;
+  }
+  
+  .open-content {
+    transition: opacity 200ms linear 0ms;
+  }
+  
+  .open-content.open {
+    opacity: 1;
+    pointer-events: all;
+    transition-delay: 1000ms;
+  }
+  
+  /* 
+  ** Media Queries
+  */
+  
+  @media screen and (max-width: 600px) {
+    .card-column {
+      width: 90%;
+    }
+    
+    .column-1 {
+      padding-top: 0px;
+    }
+    
+    .open-content img {
+      margin-top: 40px;
+    }
+  }
+
+
+
+
+
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
