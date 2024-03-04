@@ -1,0 +1,8 @@
+formula for clone = https://GitHub.io/Mr_Farooqi_141/gitclone/formula
+
+code fore export =
+$ dir
+$ cd gitclone
+$ bash gitclone.sh
+
+
