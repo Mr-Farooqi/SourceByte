@@ -26,10 +26,6 @@
 ## 🌍 Live Demo  
 🔗 [View SourceByte](https://mr-farooqi.github.io/SourceByte/)  
 
-## 📬 Contact & Support  
-📧 Email: your.email@example.com  
-💬 Join our **[Discord Community](https://discord.com/invite/xyz)**  
-
 ---
 
 🎯 **Star this repository ⭐ & contribute today!**  
